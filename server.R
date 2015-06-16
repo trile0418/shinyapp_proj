@@ -1,5 +1,3 @@
-setwd("D:/Downloads/DataScience/Coursera/Developing_Data_Products/Rcodes/Project")
-
 library(shiny)
 library(UsingR)
 data(ToothGrowth)
