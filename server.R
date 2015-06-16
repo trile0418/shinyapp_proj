@@ -36,7 +36,7 @@ shinyServer(function(input, output) {
   })
   
   output$rg_plot <- renderPlot ({
-    with(ToothGrowth, {plot(as.formula(myXY()), xlab=input$inRadio, ylab="tooth length", col="blue")
+    with(ToothGrowth, {plot(as.formula(myXY()), main="Regression Plot", xlab=input$inRadio, ylab="tooth length", col="blue")
                 abline(myFit(), col="red")
     })
   })  

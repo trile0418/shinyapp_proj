@@ -3,12 +3,8 @@ shinyUI(fluidPage(
   
   headerPanel("Tooth Length vs. Vitamin C: Data Explorer"),
   
-  br(), br(), br(),
-  
-  plotOutput(outputId="hist_plot"),
-    
-  br(),
- 
+  br(), br(), br(), hr(),
+   
   fluidRow(
     column(3,
       selectInput(inputId="n_breaks",
@@ -28,16 +24,23 @@ shinyUI(fluidPage(
     )    
   ),
   
-  br(), hr(), br(),
+  br(),  
 
-  h4(textOutput('text')),
-  plotOutput('rg_plot'),   
-          
+  plotOutput(outputId="hist_plot"),
+  
+  br(), hr(), br(),  
+  
   radioButtons("inRadio", "Select predictor:",
                c("supp" = "supp",
-                 "dose" = "dose")
-  )
+                 "dose" = "dose"),  
+  ),
 
+  br(),
+  
+  h4(textOutput('text')),
+  
+  plotOutput('rg_plot')   
+  
            
 ))
 
